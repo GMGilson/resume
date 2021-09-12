@@ -52,14 +52,14 @@
 
 % some tex-live fonts - choose your own
 
-%\usepackage[defaultsans]{droidsans}
-%\usepackage[default]{comfortaa}
-%\usepackage{cmbright}
+% \usepackage[defaultsans]{droidsans}
+% \usepackage[default]{comfortaa}
+% \usepackage{cmbright}
 \usepackage[default]{raleway}
 %\usepackage{fetamont}
-%\usepackage[default]{gillius}
-%\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
+% \usepackage[default]{gillius}
+% \usepackage[light,math]{iwona}
+% \usepackage[thin]{roboto} 
 \usepackage{xcolor}
 \usepackage{hyperref}
 \hypersetup{
@@ -104,7 +104,7 @@
 	\small{
 		Grant Gilson $\cdot$
 		Computer Science Undergraduate $\cdot$ 
-		\textcolor{sectcol}{\textbf{grantmaingilson@gmail.com}} $\cdot$
+		\textcolor{sectcol}{\textbf{\href{mailto:grantmaingilson@gmail.com}{grantmaingilson@gmail.com}}} $\cdot$
 		4089603842}}
 \rhead{}
 
@@ -361,7 +361,6 @@
 \begin{figure}[H]
 \begin{flushright}
 	\includegraphics[width=120px, height=110px, keepaspectratio]{myfoto.jpg}
-	\vspace{5px}	% Padding image a bit because im too lazy to crop
 \end{flushright}
 \end{figure}
 
@@ -468,7 +467,11 @@
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{gmgilson.github.io} $\cdot$ \textcolor{white}{github.com/gmgilson}}}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small 
+\textcolor{white}{\href{https://gmgilson.github.io}{gmgilson.github.io}} $\cdot$ 
+\textcolor{white}{\href{https://github.com/gmgilson}{github}} $\cdot$
+\textcolor{white}{\href{https://www.linkedin.com/in/grantmgilson/}{linkedin}} $\cdot$
+}}
 
 
 
