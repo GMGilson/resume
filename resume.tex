@@ -83,6 +83,7 @@
 %debug page outer frames
 %\usepackage{showframe}			
 
+\usepackage{setspace}
 
 %define page styles using geometry
 \usepackage[a4paper]{geometry}		
@@ -104,7 +105,7 @@
 	\small{
 		Grant Gilson $\cdot$
 		Computer Science Undergraduate $\cdot$ 
-		\textcolor{sectcol}{\textbf{\href{mailto:grantmaingilson@gmail.com}{grantmaingilson@gmail.com}}} $\cdot$
+		\textcolor{sectcol}{\textbf{\ColorHref[bgcol]{mailto:grantmaingilson@gmail.com}{grantmaingilson@gmail.com}}} $\cdot$
 		4089603842}}
 \rhead{}
 
@@ -268,6 +269,16 @@
 
 }
 
+\newcommand{\cveducation}[5]
+{
+\vspace{8pt}
+\begin{tabular*}{1\textwidth}{p{2.3cm}  p{7.8cm} x{7cm}}
+	\textcolor{bgcol}{#1}& \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
+	
+\end{tabular*}
+}
+
+
 \newcommand{\cveveFour}[7]
 {
 \vspace{8pt}
@@ -314,13 +325,21 @@
 %----------------------------------------------------------------------------------------
 % CUSTOM STRUT FOR EMPTY BOXES
 %----------------------------------------- -----------------------------------------------
-\newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+\newcommand{\mystrut}{\rule[-.5\baselineskip]{0pt}{\baselineskip}}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM LOREM IPSUM
 %----------------------------------------------------------------------------------------
 \newcommand{\lorem}
 {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
+
+%----------------------------------------------------------------------------------------
+% Colored Href Macro
+%----------------------------------------- -----------------------------------------------
+
+\newcommand{\ColorHref}[3][blue]{
+	\href{#2}{\color{#1}{#3}}
+}
 
 
 
@@ -333,6 +352,7 @@
 %
 %
 %============================================================================%
+\setstretch{1.2}
 \begin{document}
 
 
@@ -432,19 +452,19 @@
 \cvevent{2019}
 {Automation Intern}
 {Aparna Systems}
-{Converted legacy Python2 scripts to Python3}
 {Developed scripts to query and graph sensor data from remote servers for statistical analysis}
+{Converted legacy Python2 scripts to Python3}
 
 \cvsection{Projects}
 
 \cvevent{2020-Present}
-{\href{https://missing.cs.ucdavis.edu/}{The Missing CS Quarter}}
+{\ColorHref[sectcol]{https://missing.cs.ucdavis.edu/}{The Missing CS Quarter}}
 {University of California Davis}
-{An official ten lecture co-course for undergraduates at UC Davis to provide students with  used development tool/techniques like gdb, unittesting and git}
-{}
+{An official ten lecture co-course for undergraduates at to provide hands on experience with common development tools/techniques}
+{Developed lecture content to demonstrate tools like gdb, unittesting and git}
 
 \cvevent{2020-2021}
-{\href{https://github.com/ECS-OH-Bot/OH-Bot}{OH-Bot}}
+{\ColorHref[sectcol]{https://github.com/ECS-OH-Bot/OH-Bot}{OH-Bot}}
 {Personal Project}
 {A Discord Bot to help instructors facilitate office hours via Bot-User communication}
 {Using the Discord API, implemented wait visual wait queues to notify students when they would be seen}
@@ -452,13 +472,13 @@
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
+\vspace{10pt}
 \cvsection{Education}
 
-\cvevent{2018-Present}
+\cveducation{2018-Present}
 {Bachelors Degree - Computer Science}
 {University of California Davis}
-{}
-{}
+
 
 
 %-------------------------------------------------------------------------------------------------
@@ -468,9 +488,9 @@
 \null
 \vspace*{\fill}
 \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small 
-\textcolor{white}{\href{https://gmgilson.github.io}{gmgilson.github.io}} $\cdot$ 
-\textcolor{white}{\href{https://github.com/gmgilson}{github}} $\cdot$
-\textcolor{white}{\href{https://www.linkedin.com/in/grantmgilson/}{linkedin}} $\cdot$
+\textcolor{white}{\ColorHref[white]{https://gmgilson.github.io}{gmgilson.github.io}} $\cdot$ 
+\textcolor{white}{\ColorHref[white]{https://github.com/gmgilson}{github}} $\cdot$
+\textcolor{white}{\ColorHref[white]{https://www.linkedin.com/in/grantmgilson/}{linkedin}} $\cdot$
 }}
 
 
