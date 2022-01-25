@@ -10,7 +10,7 @@ GSFLAGS := -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH 
 all:
 	@echo "Assembling PDF as $(OUTPUTFILE)"
 	@$(LATEX) $(INPUTFILE)
-	@$(GS) $(GSFLAGS) -sOutputFile=$(COMPRESSED)-$(OUTPUTFILE)
+	@$(GS) $(GSFLAGS) -sOutputFile=$(COMPRESSED)-$(OUTPUTFILE) $(OUTPUTFILE)
 
 
 clean:
