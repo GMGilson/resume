@@ -20,3 +20,9 @@ jobs:
 
     - name: Run make
       run: make
+
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: resume-pdf
+        path: compressed-resume.pdf
